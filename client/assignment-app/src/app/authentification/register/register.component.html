@@ -1,0 +1,42 @@
+<div class="container">
+    <h1 class="title">Register</h1>
+
+
+    <div class="input">
+
+        <form ngForm #assignmentForm class="input">
+
+            <div class="input">
+                <mat-form-field class="field">
+                    <input matInput placeholder="name" [(ngModel)]="name" name="name">
+                </mat-form-field>
+
+                <mat-form-field class="field">
+                    <input matInput placeholder="email" [(ngModel)]="email" name="email">
+                </mat-form-field>
+
+                <mat-form-field class="field">
+                    <input matInput placeholder="password" [(ngModel)]="password" name="password">
+                </mat-form-field>
+           
+                    <button class="button" mat-raised-button style="background-color:#08A7B7;color: white;" (click)="onRegister()">
+                        Créer un compte
+                    </button>
+
+                    <div class="login">
+                        <div class="subtitle">
+                            <mat-card-subtitle  > Vous avez un compte ?</mat-card-subtitle>
+    
+                        </div>
+                        <a routerLink="/login">
+                            <button class="button" mat-flat-button style="background-color:#05A70D;color: white;">
+                                S'identifier
+                            </button>
+                          </a>
+                    </div>
+
+            </div>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+.form {
+  display:flex;
+  flex-direction: column;
+  margin:5px;
+}
+.container{
+  margin: 0 auto;
+  margin-bottom: 6%;
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+  -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+  user-select: none; /* Propriété standard */
+  background-color: #484D5C;
+  border-color: red;
+  width: 80%;
+  height: 65%;
+  border-radius : 15px;
+
+  
+}
+.title{
+  text-align: center;
+  color: #FFCE01;
+  margin-left: 5%;
+  font-family: 'Abril Fatface', serif;
+  font-weight: 900;
+  font-size: 200%;
+  margin-top: 5%;
+  padding-top: 5%;
+}
+.input{
+  background-color: white;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 10%;
+
+}
+.form{
+  border-radius: 20%;
+}
+.field{
+  width: 150%;
+  margin-left: -15%;
+
+}
+.button{
+  width: 150%;
+  margin-bottom: 15%;
+  margin-left: -15%;
+}
+
+.login{
+  text-align: center;
+}
+.subtitle{
+  text-align: center;
+  margin-left: 65px;
+  padding-bottom: 3%;
+
+}

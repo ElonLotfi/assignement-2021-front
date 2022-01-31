@@ -1,0 +1,91 @@
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 3%;
+  padding-bottom: 10%;
+ 
+}
+.container{
+  background-color: #484D5C;
+  width: 100%;
+  height: 800px;
+  border-radius : 15px;
+}
+.card{
+  margin-left: 3%;
+}
+
+.circular--square {
+  padding-top: 50px;
+  width : 70px; height : 70px;
+  border: none;
+  float: right;
+  margin-right: 3%;
+}
+.imageMatiere{
+  overflow:hidden;
+  -webkit-border-radius:220px;
+  -moz-border-radius:220px;
+  border-radius:220px;
+  width:220px;
+  height:220px;
+  display:flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nomMatiere{
+  padding-top: 3%;
+  text-align: center;
+  color: #FFCE01;
+  margin-left: 5%;
+  font-family: 'Abril Fatface', serif;
+  font-weight: 900;
+  font-size: 330%;
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+  -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+  user-select: none; /* Propriété standard */
+}
+.dateRendu{
+  text-align: center;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+.studentName{
+  text-align: center;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 5%;
+}
+.p-custom{
+  color:white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 900;
+  font-size: 150%;
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+  -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+  user-select: none; /* Propriété standard */
+}
+.buttonEdit{
+  margin-right: 15px;
+}
+.button{
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 5%;
+}
+.information{
+  margin-left: 3%;
+}
+
+
+.test{
+  margin: 0 auto;
+  margin-top: -5%;
+  padding-bottom: 5%;
+  width: 100px; 
+}

@@ -1,0 +1,25 @@
+<main class="container">
+<mat-card class="card">
+    <mat-card-header>
+  
+    
+      <img mat-card-image class="imageProf" src="{{imageProf}}" >
+
+      <mat-card-title class="nomMatiere">{{nomAssignemnt}}</mat-card-title>
+      <mat-card-subtitle class="date">{{dateRendu}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image class="imageMatiere" src="{{imageMatiere}}" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <div *ngIf="rendu=== true" class="rendu">
+        {{nom}} a rendu le devoir
+      </div>
+      <div *ngIf="rendu=== false" class="NonRendu">
+        {{nom}} n'a pas rendu le devoir
+      </div>
+      
+    </mat-card-content>
+    <mat-card-actions>
+    </mat-card-actions>
+  </mat-card>
+
+</main>

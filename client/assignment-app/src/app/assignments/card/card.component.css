@@ -1,0 +1,63 @@
+.card {
+    width: 350px;
+    height: 300px;
+
+    margin-top: 3%;
+    border-radius : 15px;
+    background-color: #484D5C;
+  }
+
+  .card:hover{
+    background-color: #674B7C;
+    cursor: pointer;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  .imageProf{
+    width : 70px; height : 70px;
+    border: none;
+    -moz-border-radius : 75px;
+    -webkit-border-radius : 75px;
+    border-radius : 75px;
+    margin-left: 28%;
+  }
+.imageMatiere{
+  width : 60%; height : 160px;
+  border-radius : 15px;
+  margin-left: 15%;
+
+}
+
+.rendu{
+  text-align: center;
+  font-family: 'Abril Fatface', serif;
+  font-weight: 900;
+  width: 100%;
+  font-size: 15px;
+  color: white;
+  background-color:chartreuse;
+  border-radius : 15px;
+
+}
+.NonRendu{
+  text-align: center;
+  font-family: 'Abril Fatface', serif;
+  font-weight: 900;
+  width: 100%;
+  font-size: 15px;
+  color: white;
+  background-color:red;
+  border-radius : 15px;
+}
+.nomMatiere{
+  font-family: 'Abril Fatface', serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: #FFCE01;
+}
+.date{
+  color: #FFCE01;
+}

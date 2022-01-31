@@ -1,0 +1,58 @@
+<mat-card *ngIf="assignmentTransmis">
+
+  <div class="container">
+    <div class="card">
+
+      <div *ngIf="assignmentTransmis.rendu" class="studentName">
+
+        
+      </div>
+
+      <mat-list *ngFor="let assignment of assignmentTransmis.matiere">
+        <img mat-card-image class="circular--square" src="{{assignment.imageProf}}">
+        <mat-card-title class="nomMatiere">{{assignment.nomMatiere}}</mat-card-title>
+        <img mat-card-image class="imageMatiere" src="{{assignment.imageMatiere}}">
+
+      </mat-list>
+
+     
+
+      <!-- Block responsable de information de l'assingnement -->
+      <div class="information">
+
+
+        <div *ngIf="assignmentTransmis.rendu" class="studentName">
+          <p class="p-custom "> {{assignmentTransmis.nom}} a rendu le devoir</p>
+          <!-- <mat-card-subtitle class="dateRendu">{{assignmentTransmis.dateDeRendu | date}}</mat-card-subtitle> -->
+          <p class="p-custom ">date de rendu : {{assignmentTransmis.dateDeRendu | date}}</p>
+          <p class="p-custom ">Note obtenu : {{assignmentTransmis.note}}</p>
+          <p class="p-custom ">remarque : {{assignmentTransmis.remarque}}</p>
+        </div>
+        <div *ngIf="assignmentTransmis.rendu=== false" class="studentName">
+          <p class="p-custom "> {{assignmentTransmis.nom}} n'a pas rendu le devoir </p>
+        </div>
+        <!-- second block -->
+        <div class="bottom">
+       
+  
+          <div class="button">
+            <button class="buttonEdit" mat-stroked-button [disabled]="isAdmin()" color="warn"
+              (click)="onClickEdit()">EDIT</button>
+
+            <button class="buttonDelete" mat-raised-button color="warn" (click)="onDelete()">DELETE</button>
+          </div>
+        </div>
+  
+
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+</mat-card>

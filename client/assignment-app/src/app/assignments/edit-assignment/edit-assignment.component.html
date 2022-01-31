@@ -1,0 +1,62 @@
+<div class="container" *ngIf="assignment">
+  <h1 class="title">Edition de l'assignment {{assignment.nom}}</h1>
+
+
+  <div class="input">
+
+
+    <form ngForm #assignmentForm class="input">
+
+      <div class="input">
+
+        <br>
+        <mat-form-field class="field">
+          <input matInput placeholder="Edition du nom de devoir" [(ngModel)]="nomAssignment" name="assignment-name">
+        </mat-form-field>
+
+
+        <mat-form-field class="field">
+          <input matInput placeholder="Edition du nom de l'etudiant" [(ngModel)]="nomEtudiant" name="student-name">
+        </mat-form-field>
+
+
+
+        <mat-form-field class="field">
+          <mat-select required placeholder="Matiere" [(ngModel)]="selectedToppings" name="selectedToppings"
+            [(value)]="selectedToppings" multiple>
+            <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+
+        <mat-slide-toggle required class="toggle" [(ngModel)]="isChecked" name="isChecked">
+          Rendu
+        </mat-slide-toggle>
+
+
+        <mat-form-field class="field">
+          <input required matInput [(ngModel)]="note" name="note" placeholder="Note du devoir">
+        </mat-form-field>
+
+        <mat-form-field class="field">
+          <input required matInput [(ngModel)]="remarque" name="remarque" placeholder="Remarque du devoir">
+        </mat-form-field>
+
+
+        <mat-form-field appearance="fill" class="field">
+          <mat-label>Date de rendu</mat-label>
+          <input required matInput [matDatepicker]="picker" [(ngModel)]="dateDeRendu" name="dateRendu"
+            placeholder="Edition de la date">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <button class="button" mat-raised-button color="primary" (click)="onSaveAssignment()">
+          Sauver
+        </button>
+
+      </div>
+
+    </form>
+  </div>
+</div>

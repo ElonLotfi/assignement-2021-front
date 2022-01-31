@@ -1,0 +1,47 @@
+<main class="container">
+
+
+  <div class="board">
+
+    <div class="board-bar">
+      <p class="board-name">Assignment Board</p>
+    </div>
+    <div class="paginator">
+      <mat-paginator [length]="this.totalDocs" [pageSize]="this.limit" (page)="pageEvent = getServerData($event)"
+        [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page">
+      </mat-paginator>
+    </div>
+
+    <div class="board-wrapper">
+
+      <div class="board-columns" cdkDropListGroup>
+        <div class="board-column" *ngFor="let column of board.columns ">
+
+          <div class="column-title">
+            {{ column.name }}
+          </div>
+
+          <div class="tasks-container" cdkDropList [cdkDropListData]="column.tasks" (cdkDropListDropped)="drop($event)">
+            <div class="task" *ngFor="let item of column.tasks" cdkDrag>
+              <div class="card" routerLink="/assignment/{{item.id}}">
+
+                <card [nomAssignemnt]="item.nomDevoir" [nom]="item.nom" [dateRendu]="item.dateDeRendu"
+                  [rendu]="item.rendu" [imageMatiere]="item.matiere[0].imageMatiere"
+                  [imageProf]="item.matiere[0].imageProf" [nomMatiere]="item.matiere[0].nomMatiere">
+                </card>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+</main>

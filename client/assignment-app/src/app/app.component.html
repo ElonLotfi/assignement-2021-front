@@ -1,0 +1,48 @@
+
+<nav class="nav">
+  <div class="title" routerLink="/home">
+      <h1 >{{titre}}</h1>
+  </div>
+
+  <div class="" *ngIf="logged===false">
+    
+  <a routerLink="/login">
+    <button mat-flat-button style="float: right;margin-right: 1%; background-color:#05A70D;color: white;">
+      S'identifier
+    </button>
+  </a>
+
+
+  <a routerLink="/register">
+    <button class="success" mat-flat-button style="float: right;margin-right: 1%; background-color:#08A7B7;color: white;">
+      Créer un compte
+    </button>
+  </a>
+
+</div>
+
+<div *ngIf="logged===true" >
+  <button   mat-flat-button style=" float: right;margin-right: 1%; background-color: #DD531C;color: white;" (click)="logout()">
+    Déconnexion
+  </button>
+  <a routerLink="/add">
+    <button class="success" mat-flat-button style="float: right;margin-right: 1%; background-color:#08A7B7;color: white;">
+      Ajouter
+    </button>
+  </a>
+  
+ 
+</div>
+
+
+</nav>
+
+
+
+
+
+
+<!--
+<app-assignments></app-assignments>
+-->
+<router-outlet></router-outlet>

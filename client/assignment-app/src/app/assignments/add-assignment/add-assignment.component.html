@@ -1,0 +1,139 @@
+<div class="container">
+
+
+  <h1 class="title">Ajouter un assignment </h1>
+  <div class="input">
+
+    <!-- stepper implementation  -->
+
+
+    <mat-horizontal-stepper errorMessage="error">
+      <mat-step label="step 1" [stepControl]="stepOne" errorMessage="Étape obligatoire">
+        <form [formGroup]="stepOne">
+          <div class="input">
+
+            <mat-form-field class="field">
+              <input required matInput [(ngModel)]="nomDevoir" name="nom" placeholder="Nom du devoir"
+                formControlName="nameAssignementCtrl">
+            </mat-form-field>
+
+            <mat-form-field class="field">
+              <input required matInput [(ngModel)]="studentName" name="nom" placeholder="Nom de l'étudiant"
+                formControlName="studentNameCtrl">
+            </mat-form-field>
+          </div>
+          <div class="buttonStep1">
+            <button class="btn-step1" matStepperNext (click)="completStep()">Next</button>
+          </div>
+
+        </form>
+
+      </mat-step>
+
+      <mat-step label="step 2" [stepControl]="matiereForm" errorMessage="Étape obligatoire">
+        <form [formGroup]="matiereForm">
+          <div class="input">
+
+            <mat-form-field class="field">
+              <mat-select formControlName="matiereCtrl" required placeholder="Matiere" [(ngModel)]="selectedToppings"
+                name="selectedToppings" [(value)]="selectedToppings" multiple>
+                <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </form>
+        <div class="next">
+
+          <button class="buttonNext" matStepperNext (click)="completStep()">Next</button>
+          <button class="buttonPrevious" matStepperPrevious>Previous</button>
+
+
+        </div>
+
+
+
+      </mat-step>
+
+
+
+      <mat-step label="step 3" [stepControl]="renduForm" errorMessage="Étape obligatoire">
+        <form [formGroup]="renduForm">
+          <div class="input">
+
+            <mat-slide-toggle formControlName="rendu" required class="toggle" [(ngModel)]="isChecked" name="isChecked">
+              Rendu
+            </mat-slide-toggle>
+
+            <div class="buttonStep1" *ngIf="!isChecked">
+
+              <button class="buttonNext" (click)="onSubmit()" mat-stroked-button class="button">
+                Ajouter un devoir
+              </button>
+
+            </div>
+
+          </div>
+        </form>
+        <div *ngIf="isChecked" class="next">
+          <button class="buttonPrevious" matStepperPrevious>Previous</button>
+          <button class="buttonNext" matStepperNext (click)="onSubmit()">Next</button>
+
+        </div>
+      </mat-step>
+
+
+
+      <div *ngIf="isChecked">
+
+        <mat-step label="step 4" [stepControl]="detailsForm" errorMessage="Étape obligatoire">
+          <form [formGroup]="detailsForm">
+            <div class="input">
+
+              <mat-form-field class="field">
+                <input formControlName="note" required matInput [(ngModel)]="note" name="note"
+                  placeholder="Note du devoir">
+              </mat-form-field>
+
+              <mat-form-field class="field">
+                <input formControlName="remarque" required matInput [(ngModel)]="remarque" name="remarque"
+                  placeholder="Remarque du devoir">
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" class="field">
+                <mat-label>Date de rendu</mat-label>
+                <input formControlName="date" required matInput [matDatepicker]="picker" [(ngModel)]="dateDeRendu"
+                  name="dateRendu">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+              <div class="buttonStep1">
+
+                <button class="buttonNext" (click)="onSubmit()" mat-stroked-button class="button"
+                  [disabled]="!nomDevoir || !studentName || !selectedToppings || !note || !remarque || !dateDeRendu ">
+                  Ajouter un devoir
+                </button>
+              </div>
+              <div class="finalPrevious">
+                <button class="buttonFinalPrevious" matStepperPrevious>Previous</button>
+
+              </div>
+
+
+
+
+
+            </div>
+          </form>
+
+
+        </mat-step>
+
+      </div>
+
+
+
+    </mat-horizontal-stepper>
+
+
+  </div>
+</div>
