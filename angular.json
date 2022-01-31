@@ -77,8 +77,7 @@
               "browserTarget": "assignment-app:build:development"
             },
             "options": {
-              "browserTarget": "move-safe:build",
-              "proxyConfig": "src/proxy.conf.json"
+              "browserTarget": "move-safe:build"
     }
           },
           "defaultConfiguration": "development"
