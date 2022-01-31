@@ -14,7 +14,7 @@ export class AssignmentsService {
   constructor(private loggingService:LoggingService,
     private http:HttpClient) { }
 
-  url = "https://api-assy.herokuapp.com/api/assignments";
+  url = "http://api-assy.herokuapp.com/api/assignments";
 
   getAssignments():Observable<Assignment[]> {
     // typiquement, on ferait une requête GET sur un web

@@ -17,8 +17,8 @@ export class LoggingService {
 
   loggedIn = false;
 
-  url_login = "https://api-assy.herokuapp.com/api/login";
-  url_register = "https://api-assy.herokuapp.com/api/register";
+  url_login = "http://api-assy.herokuapp.com/api/login";
+  url_register = "http://api-assy.herokuapp.com/api/register";
   private readonly JWT_TOKEN = 'JWT_TOKEN'
   private readonly REFRESH_TOKEN = 'REFRESH_TOKEN'
   private loggedUser: string | undefined;
