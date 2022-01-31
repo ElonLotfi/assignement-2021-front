@@ -49,14 +49,14 @@ export class LoggingService {
   }
 
   doLogout() {
-    sessionStorage.setItem("JWT_TOKEN", "")
+    localStorage.setItem("JWT_TOKEN", "")
     this.loggedUser = ""
     this.loggedIn = false;
   }
 
   private storeTokens(token: string) {
-    sessionStorage.setItem(this.JWT_TOKEN, token)
-    sessionStorage.setItem(this.REFRESH_TOKEN, token)
+    localStorage.setItem(this.JWT_TOKEN, token)
+    localStorage.setItem(this.REFRESH_TOKEN, token)
   }
 
   log(assignmentName: string, action: string) {
@@ -69,7 +69,7 @@ export class LoggingService {
       // ici typiquement, on pourrait faire une requête
       // et donc ça prendrait du temps... c'est la raison
       // pour laquelle on renvoie une promesse....
-      if(sessionStorage.getItem("JWT_TOKEN")!.length>0){
+      if(localStorage.getItem("JWT_TOKEN")!.length>0){
         this.loggedIn = true
       }
       resolve(this.loggedIn);

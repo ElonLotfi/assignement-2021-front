@@ -24,7 +24,7 @@ export class AppComponent {
   }
 
   checkIsLogged(){
-    if (sessionStorage.getItem("JWT_TOKEN")!.length > 0) {
+    if (localStorage.getItem("JWT_TOKEN")!.length > 0) {
       this.logged = true;
     }else{
       this.logged = false;
