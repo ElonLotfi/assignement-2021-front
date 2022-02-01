@@ -56,9 +56,8 @@ export class RegisterComponent implements OnInit {
         .subscribe(
             reponse => {
                 console.log(reponse.status)
-                if(reponse.status ==="error"){
-                    this.toastr.error("register failed")
-                }
+                window.location.replace('/login')
+
             }
         )
   }
